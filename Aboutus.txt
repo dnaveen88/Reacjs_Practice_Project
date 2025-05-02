@@ -1,0 +1,7 @@
+function AboutUs(){
+    return(
+        <div>About Us component</div>
+    )
+}
+
+export default AboutUs;

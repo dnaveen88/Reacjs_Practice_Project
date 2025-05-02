@@ -1,0 +1,30 @@
+import { Link, Outlet } from "react-router-dom";
+
+function User(){
+    return(
+        <>
+        <div>
+            <button><Link to="order">Orders</Link></button>
+            <button><Link to="profile">Profile</Link></button>
+        </div>
+        <Outlet/>
+        <h1>This is nested routing demo</h1>
+        </>
+    )
+}
+
+export function Orders(){
+    return(
+        <div>Orders Component</div>
+    )
+}
+
+export function Profile(){
+    return(
+        <div>Profile Component</div>
+    )
+}
+
+
+
+export default User;

@@ -1,0 +1,14 @@
+import React, { useState } from 'react'
+
+function Search(props){
+
+    const[newTask,SetnewTask]=useState("")
+
+    return(
+        <>
+        <input type="text"  value={newTask} onChange={(e)=>{SetnewTask(e.target.value)}}/>
+        <button onClick={()=>{props.add(newTask)}}>Add Task</button>
+        </>
+    )
+}
+export default Search;

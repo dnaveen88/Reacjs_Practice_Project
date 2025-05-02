@@ -1,0 +1,42 @@
+// redux is a store or state management library
+// example Redux 1. store, 2.reduces, 3.dispatch, 4. action
+import { createStore } from 'redux'
+
+const initialState={
+    balance:0,
+    fullName:"",
+    mobile:null,
+};
+
+function accountReducer(state=initialState, action){
+
+    switch(action.type){
+        case "deposit":
+            return {...state, balance:state.balance+ +action.payload};
+        case "withdraw":
+            return {...state, balance:state.balance- +action.payload};
+        case "mobileUpdate":
+            return {...state, mobileUpdate:action.payload};
+        case "fullName":
+            return {...state, fullName:action.payload};
+        case "reset":
+            return initialState;
+        default:
+            return state;
+    }   
+}
+
+const store = createStore(accountReducer);
+
+// console.log(store.getState())
+
+// store.dispatch({type:"deposit", payload:1000})
+// console.log(store.getState())
+// store.dispatch({type:"withdraw", payload:10})
+// console.log(store.getState())
+// store.dispatch({type:"mobileUpdate", payload:9999999999})
+// console.log(store.getState())
+// store.dispatch({type:"fullName", payload:"naveen"})
+// console.log(store.getState())
+
+export default store

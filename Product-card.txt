@@ -1,0 +1,20 @@
+function ProductCard({title, price, image, description, rating}){
+
+    // props = {
+    //     name.length,
+    //     price:100
+    // }
+    // console.log(props)
+    return(
+       
+       <div className="card">
+        <img src={image}/>
+        <p>{title}</p>
+        <p>${price}</p>
+        <p>About product: {description}</p>
+        <p>Rating: {rating.rate}</p>
+
+       </div>
+    )
+}
+export default ProductCard

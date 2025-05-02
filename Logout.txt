@@ -1,0 +1,27 @@
+import React from 'react';
+
+function Logout({onLogout}){
+    const handleConfirmLogout = ()=>{
+        onLogout();
+    }
+
+    return(
+
+        <div className='container mt-5 w-50'>
+            <h2 className='text-center'>Logging out..</h2>
+            <p>Are you sure you want to logout?.</p>
+
+            {handleConfirmLogout()}
+            
+            {/* <div>
+                <button className='btn btn-danger me-2' onClick={handleConfirmLogout}>
+                    Yes, Logout
+                </button>
+            
+            <button className='btn btn-secondary' onClick={() => window.history.back()}>Cancel</button>
+        </div> */}
+        </div>
+    )
+}
+
+export default Logout;
